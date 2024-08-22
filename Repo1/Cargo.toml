@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/B_Auth_1_backend"
+]
+resolver = "2"

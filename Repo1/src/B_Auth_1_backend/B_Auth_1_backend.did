@@ -1,0 +1,8 @@
+type NFT = record { id : nat64; owner : text; metadata : text };
+service : () -> {
+  add_user : (text, bool, bool) -> ();
+  create_batch_nft : (text) -> (nat64);
+  create_product_nft : (nat64, text) -> (nat64);
+  get_nft_info : (nat64, nat64) -> (opt NFT) query;
+  transfer_nft_to_wholesaler : (nat64, nat64, text) -> ();
+}

@@ -1,0 +1,68 @@
+/* Center the content of the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #69bff5c5;
+}
+
+.imgcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the main container */
+.img {
+  margin: 50px;
+}
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Style the headers */
+h1, h2 {
+  color: #333;
+  text-align: center;
+}
+
+/* Style the form elements */
+input[type="text"], input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the response text */
+p {
+  text-align: center;
+  color: #555;
+}

@@ -1,0 +1,51 @@
+{
+  "canisters": {
+    "B_Auth_1_backend": {
+      "candid": "src/B_Auth_1_backend/B_Auth_1_backend.did",
+      "package": "B_Auth_1_backend",
+      "type": "rust"
+    },
+    "B_Auth_1_frontend": {
+      "dependencies": [
+        "B_Auth_1_backend"
+      ],
+      "source": [
+        "src/B_Auth_1_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "B_Auth_1_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+
+  "nft_project": {
+      "type": "custom",
+      "candid": "src/nft_project.did",
+      "source": ["src/nft_project"],
+      "main": "src/nft_project/main.rs",
+      "build": "cargo build --target wasm32-unknown-unknown --release",
+      "deploy": "dfx deploy",
+      "public": "false"
+    },
+    
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+
+
+  "output_env_file": ".env",
+  "version": 1
+}
